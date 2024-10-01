@@ -3,7 +3,7 @@
 ## Linux
 
 ### Task - 1 [File Permissions]
-To create a new empty file named `example.txt`, and change gile permissions, use these commands : 
+Created a file named `example.txt`, and changed its permissions using `chmod` command. 
 ```bash
 touch example.txt
 chmod 600 example.txt
@@ -23,7 +23,10 @@ ls -l example.txt
 
 ### Task - 2 [Process Management]
 
-To view all the currently running processes in real-time, use the `top` command:
+- to view all the currently running processes in real-time, we use the `top` command.
+- to get the process id of firefox, used `pidof` command,
+- then killed the process using `kill` command,
+- and to verify whether the process is killed or not, we can run the `kill` command with same process id
 ```bash
 top
 # Shows a dynamic list of processes, including their Process ID (PID), user, CPU, memory usage.
@@ -77,14 +80,44 @@ kill 5783
 ---
 
 ### Task - 2 [Join with multiple Tables]
+### SQL Exercise: Join with Multiple Tables
+
+- `JOIN`: Combines rows from two or more tables based on a related column.
+  - `INNER JOIN`: Retrieves records that have matching values in both tables.
+
+- `ON`: Specifies the condition for the join.
+  - Used to join the `customers` and `orders` tables on the `customer_id`.
+
+- `JOIN with multiple tables`: Combines rows from `customers`, `orders`, and `products` tables.
+  - The `products` table is joined with the previous result set to display the products ordered by each customer.
+
+- `GROUP BY`: Groups the result set by one or more columns.
+  - Groups by `customer_name` to aggregate the total order amount.
+
+- `HAVING`: Filters groups of rows based on a specified condition.
+  - Used to filter out customers or orders based on certain conditions after grouping (if required).
+
+![2](https://github.com/user-attachments/assets/ec307fcf-28e3-42b2-a2d7-07168be4dc64)
 
 ---
 
 ### Task - 3 [Set Operations]
+### SQL Exercise: Set Operations
+
+- `UNION`: Combines the result set of two or more `SELECT` statements, returning unique records.
+  - Used to get a list of unique employees from both the `employees_2023` and `employees_2024` tables.
+
+- `INTERSECT`: Returns the common rows from both `SELECT` statements.
+  - Used to find employees who worked in both 2023 and 2024.
+
+- `EXCEPT`: Returns rows from the first `SELECT` statement that are not in the second `SELECT` statement.
+
+![3](https://github.com/user-attachments/assets/e1d69378-3755-4931-89d5-7da0429f8a71)
 
 ---
 
 ### Task - 4 [Combining Linux and SQL]
+
 ![4](https://github.com/user-attachments/assets/bc8c9b01-6144-41db-a7bd-1ed5fdfc3671)
 
 
